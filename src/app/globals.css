@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+    
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow: hidden;
+    background-image: url("/images/woodbg.avif");
+  background-size: cover;
+  }
+
+}
+
+/* .parchment {
+  position: absolute;
+  display: flex;
+    width: 95%;
+  min-height: calc((1vw + 1vh) * 50);
+  top: 0%; left: 50%; transform: translate(-50%, 0);
+  margin: 2em 0;
+    padding: 4em;
+    box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+    background: #fffef0;
+  filter: url(#wavy2);
+} */
+.parchment {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  scale: 1;
+  width: 100%;
+  height: 85%;
+  top: 3%; left: 50%; transform: translate(-50%, 0);
+  box-shadow: 2px 3px 20px black, 0 0 60px #8a4d0f inset;
+  background: #fffef0;
+  filter: url(#wavy2);
+} 
+.settings {
+  position: absolute;
+  right: 30px;
+  padding: 5px;
+  transform: rotate(0deg);
+  transition: 0.4s ease;
+}
+.settings:hover {transform: rotate(90deg);
+}
+
+.contain {
+  position: relative;
+ 	display: flex;
+  flex-direction: column;
+	width: 95%;
+  height: 100%;
+  margin: 0 auto;
+	padding: 4em;
+}
+
+.modalBg {
+  background-image: url("../../public/images/paper-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* filter: url(#wavy2); */
+  left: 50%; transform: translate(-50%, 0);
+}
+
+@font-face {
+  font-family: 'moria_citadelregular';
+  src: url('/fonts/moriacitadel-webfont.woff2') format('woff2'),
+       url('/fonts/moriacitadel-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+@font-face {
+font-family: 'humongous_of_eternity_stRg';
+  src: url('/fonts/humongous_of_eternity_st-webfont.woff2') format('woff2'),
+       url('/fonts/humongous_of_eternity_st-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
